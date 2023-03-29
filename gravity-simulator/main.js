@@ -43,6 +43,11 @@ scene.add(group)
 
 camera.position.z = 15
 
+const mouse = {
+  x: undefined,
+  y: undefined
+}
+
 function animate() {
   requestAnimationFrame(animate)
   renderer.render(scene, camera)
@@ -53,11 +58,6 @@ function animate() {
     duration: 2})
 }
 animate()
-
-const mouse = {
-  x: undefined,
-  y: undefined
-}
 
 addEventListener('mousemove', (event) => {
   mouse.x = (event.clientX / innerWidth) * 2 - 1
